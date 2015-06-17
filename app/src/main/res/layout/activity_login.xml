@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="movil.salt.weeknews.LoginActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <EditText
+        android:hint="user"
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:hint="password"
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:background="#ffffff"
+        android:textColor="#ff3d39ff"
+        android:inputType="text"
+        android:text="Ingresar"
+        android:id="@+id/ingresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:background="#ffffff"
+        android:textColor="#ff3d39ff"
+        android:inputType="text"
+        android:text="Registrate"
+        android:id="@+id/registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
