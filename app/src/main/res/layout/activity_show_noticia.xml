@@ -1,0 +1,35 @@
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="movil.salt.weeknews.ShowNoticiaActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:textSize="30sp"
+        android:background="#ffffff"
+        android:id="@+id/title_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <WebView
+        android:id="@+id/contenido_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:background="#ffffff"
+        android:clickable="true"
+        android:autoLink="web"
+        android:id="@+id/link_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+</ScrollView>
