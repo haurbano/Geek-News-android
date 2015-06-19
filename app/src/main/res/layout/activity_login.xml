@@ -6,6 +6,10 @@
     android:orientation="vertical"
     android:layout_gravity="center">
 
+    <ImageView
+        android:src="@drawable/geeksnews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <EditText
         android:hint="user"
         android:id="@+id/user"
