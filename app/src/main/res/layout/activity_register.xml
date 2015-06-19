@@ -7,27 +7,41 @@
     android:orientation="vertical">
 
     <EditText
+        android:id="@+id/txt_nombre"
         android:hint="Nombres"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/txt_apellido"
         android:hint="Apellidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
-        android:hint="Correo Electronio"
+        android:id="@+id/txt_email"
+        android:inputType="textEmailAddress"
+        android:hint="Correo Electrónico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/txt_usuario"
         android:hint="Usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/txt_contraseña"
+        android:inputType="textPassword"
         android:hint="Contraseña"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_registrar"
+        android:text="Registrarse"
+        android:gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 

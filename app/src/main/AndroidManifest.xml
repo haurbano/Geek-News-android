@@ -26,6 +26,14 @@
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name=".ShowNoticiaActivity"
+            android:label="@string/title_activity_show_noticia" >
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main_activity2" >
+        </activity>
     </application>
 
 </manifest>

@@ -6,16 +6,12 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:textColor="#f61327ff"
+        android:textSize="25sp"
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/link"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/contenido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
+
 
 </LinearLayout>

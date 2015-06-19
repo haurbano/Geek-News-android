@@ -22,19 +22,20 @@ import movil.salt.weeknews.models.Noticia;
 /**
  * Created by pc on 09/06/2015.
  */
-public class ejecutarGet extends AsyncTask{
+public class ejecutarGet extends AsyncTask<String,Integer,String>{
 
-
+    noticiasGenerales noti;
     String respuestaString;
     static final  String uriRSS = "http://pipes.yahoo.com/pipes/pipe.run?_id=ed4a7895e7d48bae9c8c73820ad6f70a&_render=rss";
     static final String uriJSON ="https://pipes.yahoo.com/pipes/pipe.run?_id=ed4a7895e7d48bae9c8c73820ad6f70a&_render=json";
 
 
-    public ejecutarGet() {
+    public ejecutarGet( noticiasGenerales noti) {
+        this.noti = noti;
     }
 
     @Override
-    protected Object doInBackground(Object[] objects) {
+    protected String doInBackground(String[] objects) {
 
         try
         {
@@ -51,17 +52,16 @@ public class ejecutarGet extends AsyncTask{
             Toast.makeText(MainActivity.getContext(),"Debes conectarte a internet",Toast.LENGTH_SHORT).show();
         }
 
-        return null;
+        return respuestaString;
     }
 
     @Override
-    protected void onPostExecute(Object o) {
-        noticiasGenerales noticiasEnviar = new noticiasGenerales();
+    protected void onPostExecute(String o) {
         ArrayList<Noticia> noticias = new ArrayList<>();
 
         //region Json parser
         try {
-            JSONObject object = new JSONObject(respuestaString);
+            JSONObject object = new JSONObject(o);
             JSONObject value = object.getJSONObject("value");
             JSONArray noticiasJson = value.getJSONArray("items");
             for (int i =0;i<noticiasJson.length();i++)
@@ -75,7 +75,7 @@ public class ejecutarGet extends AsyncTask{
                 noticias.add(noticia);
             }
 
-            noticiasEnviar.setNoticias(noticias);
+            noti.setNoticias(noticias);
 
         } catch (JSONException e) {
             e.printStackTrace();

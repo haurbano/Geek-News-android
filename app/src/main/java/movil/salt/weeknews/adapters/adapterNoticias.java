@@ -3,6 +3,7 @@ package movil.salt.weeknews.adapters;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -57,11 +58,6 @@ public class adapterNoticias extends BaseAdapter {
         TextView title = (TextView) v.findViewById(R.id.title);
         title.setText(noticia.getTitle());
 
-        TextView link = (TextView) v.findViewById(R.id.link);
-        link.setText(noticia.getLink());
-
-        TextView contenido = (TextView) v.findViewById(R.id.contenido);
-        contenido.setText(noticia.getContenido());
 
         return v;
     }
